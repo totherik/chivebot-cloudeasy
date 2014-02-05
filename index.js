@@ -14,7 +14,7 @@ module.exports = {
 
         plugin.dependency('chivebot', function (plugin, next) {
 
-            plugin.plugins.chivebot.registerCommand('how easy', function (raw, args, cb) {
+            plugin.plugins.chivebot.registerCommand('how', function (raw, args, cb) {
                 cb(null, 'it\'s CLOUD easy:tm:, friend!');
             });
 
