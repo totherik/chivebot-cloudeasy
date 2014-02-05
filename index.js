@@ -1,7 +1,6 @@
 'use strict';
 
-var pkg = require('./package'),
-    cool = require('cool-ascii-faces');
+var pkg = require('./package');
 
 
 module.exports = {
