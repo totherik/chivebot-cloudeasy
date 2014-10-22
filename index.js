@@ -1,28 +1,23 @@
 'use strict';
 
-var pkg = require('./package');
+var Package = require('./package');
 
 
-module.exports = {
+exports.register = function (plugin, options, next) {
 
-    name: pkg.name,
+    plugin.dependency('chivebot', function (plugin, next) {
 
-    version: pkg.version,
-
-    register: function (plugin, options, next) {
-
-        plugin.dependency('chivebot', function (plugin, next) {
-
-            plugin.plugins.chivebot.registerCommand('how', function (raw, args, cb) {
-                cb(null, 'it\'s CLOUD easy:tm:, friend!');
-            });
-
-            next();
-
+        plugin.plugins.chivebot.registerCommand('how', function (raw, args, cb) {
+            cb(null, 'it\'s CLOUD easy:tm:, friend!');
         });
 
         next();
+    });
 
-    }
+    next();
+};
 
+
+exports.register.attributes = {
+    pkg: Package
 };
