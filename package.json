@@ -1,6 +1,6 @@
 {
   "name": "chivebot-cloudeasy",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A silly chivebot plugin",
   "main": "index.js",
   "scripts": {
